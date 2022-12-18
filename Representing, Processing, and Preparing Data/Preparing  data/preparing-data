@@ -2,3 +2,16 @@ import pandas as pd
 import numpy as np
 toy_df = pd.DataFrame({'numbers': [1, 2, 3, np.nan, np.nan, np.nan, 7]})
 toy_df
+
+toy_df.isnull().sum()
+
+dropped_toy_df = toy_df.dropna()
+print(dropped_toy_df)
+
+filled_toy_df = toy_df.fillna(0)
+print(filled_toy_df)
+
+backfilled_toy_df = toy_df.fillna(method='bfill')
+print(backfilled_toy_df)
+
+forwardfilled
